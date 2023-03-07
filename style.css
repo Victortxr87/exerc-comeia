@@ -39,7 +39,6 @@ border-radius: 50%;
   .menu ul {
 
    display: flex;
-   
    padding-right: 140px;
    text-decoration: none;
 
@@ -118,9 +117,9 @@ form label,form legend  {
 }
 .enviar {
 
-   width: 40%;
+   width: 55%;
    padding: 15px 0;
-   background: rgb(247, 169, 80);
+   background: #AAC870;
    color: rgb(5, 5, 4);
    font-weight: bold;
    font-size: 18px;
@@ -128,8 +127,10 @@ form label,form legend  {
    border-radius: 5px;
    transition: 1s all; 
    cursor: pointer ;
+   
 
 } 
+
 /*   css contato */
 
 .contato {
@@ -162,4 +163,38 @@ top: 0;
    text-align: center;
 }
 
+
+@media only screen and (max-width: 500px) {
+
+   
+   form {
+     width: 80%;
+   }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+   
+  
+   .menu ul li {
+      margin: 5px;
+      
+
+   }
+   .menu ul {
+
+      padding: 0;
+       margin: 5px;
+
+   }
+ 
+ 
+
+}
+@media only screen and (max-width: 750px) {
+   .enviar {
+       padding: 25px 0px;
+   }
+}
 
