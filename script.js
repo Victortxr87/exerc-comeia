@@ -1,17 +1,37 @@
-function enviarMensagem() {
-    // Obter os valores dos campos do formulário
+function enviarParaWhatsApp() {
+    
     const nome = document.getElementById("nomeesobrenome").value;
     const email = document.getElementById("E-mail").value;
     const telefone = document.getElementById("Telefone").value;
     const mensagem = document.getElementById("mensagem").value;
   
-    // Concatenar os valores em uma mensagem única
-    const mensagemCompleta = `Nome: ${nome}%0AEmail: ${email}%0ATelefone: ${telefone}%0AMensagem: ${mensagem}`;
+    
+    const tipoContato = document.querySelector('input[name="contato"]:checked').value;
   
-    // Criar o link com a mensagem pré-definida
-    const link = `https://wa.me/351931373069?text=${mensagemCompleta}`;
+   
+    let texto = `Olá, meu nome é ${nome}.`;
   
-    // Redirecionar para o link
-    window.location.href = link;
+    if (tipoContato === "E-mail") {
+      texto += ` Meu e-mail é ${email}.`;
+    } else if (tipoContato === "telefone") {
+      texto += ` Meu telefone é ${telefone}.`;
+    } else {
+      texto += ` Meu número do WhatsApp é ${telefone}.`;
+    }
+  
+    texto += ` Minha mensagem é: ${mensagem}`;
+  
+   
+    const textoCodificado = encodeURIComponent(texto);
+  
+   
+    window.open(`https://wa.me/351931373069?text=${textoCodificado}`);
   }
+  
+ 
+  const formulario = document.querySelector("form");
+  formulario.addEventListener("submit", function(event) {
+    event.preventDefault(); 
+    enviarParaWhatsApp();
+  });
   
