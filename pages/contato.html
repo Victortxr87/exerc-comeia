@@ -41,7 +41,7 @@
 </nav>
 
 <main>
-    <form>
+    <form onsubmit="enviarMensagem()">
        <label for="nomeesobrenome"> Nome e sobrenome  </label> 
         <input type="text" id="nomeesobrenome" class="input-padrao" required placeholder="Seu nome">
     
@@ -57,10 +57,7 @@
         <textarea cols="53"  rows="10" id="mensagem" class="input-padrao" required > </textarea>
         
         <input type="submit" value="Enviar formulário" class="enviar">
-    
-   
-   
-    
+
         
     </form>
     
@@ -72,5 +69,6 @@
         <p>Desenvolvido por João Victor Teixeira.</p>
         
     </footer>
+    <script src="../script.js"></script>
 </body>
 </html>
