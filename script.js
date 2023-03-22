@@ -13,10 +13,9 @@ function enviarParaWhatsApp() {
   
     if (tipoContato === "E-mail") {
       texto += ` Meu e-mail é ${email}.`;
-    } else if (tipoContato === "telefone") {
-      texto += ` Meu telefone é ${telefone}.`;
-    } else {
-      texto += ` Meu número do WhatsApp é ${telefone}.`;
+    } else if (tipoContato === "telefone") ;
+     else {
+      texto += ` Meu número é ${telefone}.`;
     }
   
     texto += ` Minha mensagem é: ${mensagem}`;
